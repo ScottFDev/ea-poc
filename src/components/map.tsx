@@ -8,7 +8,7 @@ const Map = () => {
     const position = [51.505, -0.09]
     return (
         <MapContainer
-        className="map-container"
+        className="h-36"
         center={[38, 139.69222]}
         zoom={6}
         minZoom={3}
