@@ -1,14 +1,20 @@
-import './App.css'
-import Map from './components/map'
+import React, { useState } from 'react';
+import FileUpload from './components/FileUpload';
+import MapComponent from './components/map';
 
-function App() {
+const App = () => {
+  const [overlayImage, setOverlayImage] = useState(null);
+
+  const handleFileUpload = (imageURL) => {
+    setOverlayImage(imageURL);
+  };
 
   return (
-    <>
-    <h1>POC</h1>
-      <Map/>
-    </>
-  )
-}
+    <div>
+      <FileUpload onFileUpload={handleFileUpload} />
+      <MapComponent overlayImage={overlayImage}  />
+    </div>
+  );
+};
 
-export default App
+export default App;
