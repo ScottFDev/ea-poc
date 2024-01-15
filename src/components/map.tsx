@@ -1,3 +1,4 @@
+import { latLngBounds } from 'leaflet';
 import 'leaflet/dist/leaflet.css';
 import { ImageOverlay } from 'react-leaflet';
 import { MapContainer } from 'react-leaflet/MapContainer'
@@ -5,6 +6,9 @@ import { TileLayer } from 'react-leaflet/TileLayer'
 
 
 const MapComponent = ({overlayImage}) => {
+  const bounds = latLngBounds([[51.49, -0.08], [51.5, -0.06]]); 
+  
+
     return (
         <MapContainer
         className="h-36"
