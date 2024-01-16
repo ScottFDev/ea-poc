@@ -18,11 +18,13 @@ const MapComponent = ({overlayImage}) => {
         maxZoom={19}
         maxBounds={[[-85.06, -180], [85.06, 180]]}
         scrollWheelZoom={true}
-        style={{height: '500px'}}>
+        style={{height: '1000px'}}>
         <TileLayer
-          attribution='&copy; <a href="https://stadiamaps.com/" target="_blank">Stadia Maps</a>, &copy; <a href="https://openmaptiles.org/" target="_blank">OpenMapTiles</a> &copy; <a href="https://www.openstreetmap.org/about" target="_blank">OpenStreetMap</a> contributors'
-          url="https://tiles.stadiamaps.com/tiles/alidade_smooth_dark/{z}/{x}/{y}{r}.png"
+          attribution='&copy; <a href="https://www.openstreetmap.org/copyright" target="_blank">OpenStreetMap</a> contributors'
+          url="https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png"
         />
+
+
         {overlayImage && <ImageOverlay bounds={bounds} url={overlayImage} opacity={0.5}/>}
         </MapContainer>
     )
